@@ -33,12 +33,6 @@ class AlbumTableViewController: UITableViewController {
   
 
   // MARK: - Table view data source
-  
-  override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-    // #warning Incomplete implementation, return the number of sections
-    return 1
-  }
-  
   override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     // #warning Incomplete implementation, return the number of rows
     return albumsFetchResult.count
@@ -52,7 +46,6 @@ class AlbumTableViewController: UITableViewController {
     
     if album.estimatedAssetCount != NSNotFound {
       let albumPlural = album.estimatedAssetCount > 1 ? "s" : ""
-      
       let subTitle = "\(album.estimatedAssetCount) Photo\(albumPlural)"
       cell.detailTextLabel?.text = subTitle
     }else {
@@ -70,11 +63,19 @@ class AlbumTableViewController: UITableViewController {
       }
     }
     
-    
-    
     return cell
   }
   
+  
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    if segue.identifier == "AlbumShowDetail" {
+      let controller = segue.destinationViewController as! AlbumCollectionViewController
+      let tappedIndexPath = tableView.indexPathForSelectedRow!
+      let tappedCollection = albumsFetchResult.objectAtIndex(tappedIndexPath.row) as! PHAssetCollection
+      controller.title = tappedCollection.localizedTitle
+      controller.selectedCollection = tappedCollection
+    }
+  }
 }
 
 extension AlbumTableViewController: PHPhotoLibraryChangeObserver {

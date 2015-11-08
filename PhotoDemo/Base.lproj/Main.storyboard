@@ -91,6 +91,9 @@
                                     <animations/>
                                 </tableViewCellContentView>
                                 <animations/>
+                                <connections>
+                                    <segue destination="kws-UY-ehk" kind="show" identifier="AlbumShowDetail" id="yIm-nX-3gh"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -103,6 +106,60 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9GF-7a-M0t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="152" y="1560"/>
+        </scene>
+        <!--Album Collection View Controller-->
+        <scene sceneID="m3g-YP-DFn">
+            <objects>
+                <collectionViewController id="kws-UY-ehk" customClass="AlbumCollectionViewController" customModule="PhotoDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="UsE-PY-0di">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="2" minimumInteritemSpacing="2" id="HDO-Lh-YXE">
+                            <size key="itemSize" width="89" height="84"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AlbumCell" id="O0c-Nc-hnz" customClass="AlbumCollectionViewCell" customModule="PhotoDemo" customModuleProvider="target">
+                                <rect key="frame" x="8" y="64" width="89" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="89" height="84"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gt9-m5-bMZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="89" height="84"/>
+                                            <animations/>
+                                        </imageView>
+                                    </subviews>
+                                    <animations/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="gt9-m5-bMZ" secondAttribute="bottom" id="5O1-Op-gAE"/>
+                                    <constraint firstItem="gt9-m5-bMZ" firstAttribute="leading" secondItem="O0c-Nc-hnz" secondAttribute="leading" id="FQO-VQ-d0c"/>
+                                    <constraint firstAttribute="trailing" secondItem="gt9-m5-bMZ" secondAttribute="trailing" id="qVt-2N-3IR"/>
+                                    <constraint firstItem="gt9-m5-bMZ" firstAttribute="top" secondItem="O0c-Nc-hnz" secondAttribute="top" id="u7J-ye-3gY"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="imageView" destination="gt9-m5-bMZ" id="glk-UL-Qq4"/>
+                                    <segue destination="aYv-oM-2BZ" kind="show" identifier="AlbumShowAsset" id="nPL-st-z2C"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="kws-UY-ehk" id="z2Y-kS-okh"/>
+                            <outlet property="delegate" destination="kws-UY-ehk" id="Qko-GQ-6cl"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HOV-M9-3QT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="864" y="1559"/>
         </scene>
         <!--Photos-->
         <scene sceneID="ODT-UE-ILy">
@@ -224,7 +281,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="02X-bQ-npc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1493" y="798"/>
+            <point key="canvasLocation" x="1591" y="808"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="aGq-ht-5oq">
@@ -287,4 +344,7 @@
             <point key="canvasLocation" x="-660" y="1560"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="nPL-st-z2C"/>
+    </inferredMetricsTieBreakers>
 </document>

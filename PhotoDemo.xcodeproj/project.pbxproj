@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0417094C1BEF857100D9B32C /* AlbumCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0417094B1BEF857100D9B32C /* AlbumCollectionViewController.swift */; };
+		0417094E1BEF861600D9B32C /* AlbumCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0417094D1BEF861600D9B32C /* AlbumCollectionViewCell.swift */; };
 		0442445E1BEEF7FD0059DBBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0442445D1BEEF7FD0059DBBC /* AppDelegate.swift */; };
 		044244601BEEF7FD0059DBBC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0442445F1BEEF7FD0059DBBC /* ViewController.swift */; };
 		044244631BEEF7FD0059DBBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044244611BEEF7FD0059DBBC /* Main.storyboard */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0417094B1BEF857100D9B32C /* AlbumCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumCollectionViewController.swift; sourceTree = "<group>"; };
+		0417094D1BEF861600D9B32C /* AlbumCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumCollectionViewCell.swift; sourceTree = "<group>"; };
 		0442445A1BEEF7FD0059DBBC /* PhotoDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0442445D1BEEF7FD0059DBBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0442445F1BEEF7FD0059DBBC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +95,8 @@
 			isa = PBXGroup;
 			children = (
 				04AE4AFA1BEF4D8F00FFCE90 /* AlbumTableViewController.swift */,
+				0417094B1BEF857100D9B32C /* AlbumCollectionViewController.swift */,
+				0417094D1BEF861600D9B32C /* AlbumCollectionViewCell.swift */,
 			);
 			name = Albums;
 			sourceTree = "<group>";
@@ -166,8 +172,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0417094E1BEF861600D9B32C /* AlbumCollectionViewCell.swift in Sources */,
 				04AE4AF21BEF298C00FFCE90 /* PhotosCollectionViewController.swift in Sources */,
 				04AE4AF61BEF29EE00FFCE90 /* AssetViewContoller.swift in Sources */,
+				0417094C1BEF857100D9B32C /* AlbumCollectionViewController.swift in Sources */,
 				04AE4AF41BEF29CA00FFCE90 /* MomentHeaderView.swift in Sources */,
 				044244601BEEF7FD0059DBBC /* ViewController.swift in Sources */,
 				0442445E1BEEF7FD0059DBBC /* AppDelegate.swift in Sources */,
@@ -287,6 +295,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.rolyo.PhotoDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -298,6 +307,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.rolyo.PhotoDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
